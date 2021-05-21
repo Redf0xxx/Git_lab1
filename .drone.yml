@@ -1,14 +1,10 @@
 kind: pipeline
-type: ssh
-name: default
-
-server:
-  host: 1.2.3.4
-  user: root
-  password:
-    from_secret: password
+type: docker
+name: testtest
 
 steps:
 - name: greeting
+  image: alpine
   commands:
-  - echo hello world
+  - echo hello
+  - echo world
